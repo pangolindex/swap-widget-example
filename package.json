@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@gelatonetwork/limit-orders-react": "2.4.0",
-    "@pangolindex/components": "1.0.8-rc.2",
+    "@pangolindex/components": "1.0.8-rc.3",
     "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
