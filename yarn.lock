@@ -2084,10 +2084,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pangolindex/components@1.0.8-rc.3":
-  version "1.0.8-rc.3"
-  resolved "https://registry.yarnpkg.com/@pangolindex/components/-/components-1.0.8-rc.3.tgz#e23a20cf180bf6aa2c5bded34570c218526a179a"
-  integrity sha512-KOlSz8vr859UhQToeXP3xvo7Ahv5LXSHt48/JyFzaapNw2NHprDRTj9lRt4Sxlh/bRYkzvrUj5ntXmRoM1ZghQ==
+"@pangolindex/components@1.0.8-rc.5":
+  version "1.0.8-rc.5"
+  resolved "https://registry.yarnpkg.com/@pangolindex/components/-/components-1.0.8-rc.5.tgz#54aefa6831f6ededb389f365c72e748b3e11286a"
+  integrity sha512-JPbnIGDqRHaoY35zlWZRszdF7eNB6hDyiIsBStZ0HX33atfyIyyez1SP9HajtpqdSP6mXpXQJNpcxeB9Eu+kaw==
   dependencies:
     cids "^1.1.9"
     react-switch "^6.0.0"
