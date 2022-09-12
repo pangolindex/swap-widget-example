@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "@ethersproject/providers": "^5.6.8",
-    "@pangolindex/components": "4.1.0-rc.4",
-    "@pangolindex/sdk": "3.0.1",
+    "@pangolindex/components": "4.1.0-rc.9",
+    "@pangolindex/sdk": "3.1.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
