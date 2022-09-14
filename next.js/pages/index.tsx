@@ -84,28 +84,31 @@ const Home: NextPage = () => {
   }
 
   return (
-    <PangolinProvider account={account} chainId={chainId} library={web3jsProvider}>
-      <div className="App">
-        <Button
-          variant="primary"
-          onClick={() => {
-            if (account) {
-              disconnect();
-            } else {
-              connectWallet();
-            }
-          }}
-          width="400px"
-        >
-          {account ? 'Disconnect' : 'Connect'} Wallet
-        </Button>
-        {account && <div className="wallet">{account}</div>}
+    <>
+      <div style={{ color: 'white', textAlign: 'center' }}>Swap Widget Example</div>
+      <PangolinProvider account={account} chainId={chainId} library={web3jsProvider}>
+        <div className="App">
+          <Button
+            variant="primary"
+            onClick={() => {
+              if (account) {
+                disconnect();
+              } else {
+                connectWallet();
+              }
+            }}
+            width="400px"
+          >
+            {account ? 'Disconnect' : 'Connect'} Wallet
+          </Button>
+          {account && <div className="wallet">{account}</div>}
 
-        <div style={{ marginTop: '10px', maxWidth: 400 }}>
-          <SwapWidget isLimitOrderVisible={false} />
+          <div style={{ marginTop: '10px', maxWidth: 400 }}>
+            <SwapWidget isLimitOrderVisible={false} />
+          </div>
         </div>
-      </div>
-    </PangolinProvider>
+      </PangolinProvider>
+    </>
   );
 };
 
