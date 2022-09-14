@@ -1,0 +1,30 @@
+{
+  "name": "nextswap",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pangolindex/components": "4.2.0-rc.0",
+    "@pangolindex/sdk": "3.1.3",
+    "next": "^12.3.0",
+    "next-transpile-modules": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5",
+    "web3modal": "^1.9.9"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "prettier": "^2.7.1",
+    "typescript": "4.8.3"
+  }
+}
