@@ -1,3 +1,5 @@
+# [Demo](https://swap-widget-cra.vercel.app/)
+
 # Pangolin Swap Widget Example
 
 ### `yarn install`
