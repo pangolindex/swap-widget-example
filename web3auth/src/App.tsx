@@ -1,13 +1,13 @@
 import { Button, SwapWidget } from '@pangolindex/components';
 import React, { useContext } from 'react';
 import './App.css';
-import { Web3AuthContext, Web3Context } from './context';
-import getLibrary from './utils/getLibrary';
+import getProvider, { Web3AuthContext } from './utils';
 
-function App({ handleProvider }: { handleProvider: (provider: any) => void }) {
+type Props = { onProviderChange: (provider: any) => void; provider: any; account: string };
+
+function App(props: Props) {
+  const { onProviderChange, provider, account } = props;
   const web3auth = useContext(Web3AuthContext);
-
-  const { library: provider, account } = useContext(Web3Context);
 
   const login = async () => {
     if (!web3auth) {
@@ -15,8 +15,8 @@ function App({ handleProvider }: { handleProvider: (provider: any) => void }) {
       return;
     }
     const web3authProvider = await web3auth.connect();
-    const _provider = getLibrary(web3authProvider);
-    handleProvider(_provider);
+    const _provider = getProvider(web3authProvider);
+    onProviderChange(_provider);
   };
 
   const logout = async () => {
@@ -25,7 +25,7 @@ function App({ handleProvider }: { handleProvider: (provider: any) => void }) {
       return;
     }
     await web3auth.logout();
-    handleProvider(undefined);
+    onProviderChange(undefined);
   };
 
   return (
@@ -34,9 +34,11 @@ function App({ handleProvider }: { handleProvider: (provider: any) => void }) {
         {!provider ? 'Connect Wallet' : account}
       </Button>
       {!!provider && (
-        <Button variant="primary" onClick={logout} width="400px"> Logout</Button>
+        <Button variant="primary" onClick={logout} width="400px">
+          Logout
+        </Button>
       )}
-      <div style={{  maxWidth: '400px' }}>
+      <div style={{ maxWidth: '400px' }}>
         <SwapWidget />
       </div>
     </div>
